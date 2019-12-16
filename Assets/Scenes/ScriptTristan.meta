@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scenes/ScriptTristan.meta
 guid: 334c19e133a66ba49a297d89fade3dca
+=======
+guid: 4e105abadf033cc4c8698abccf21c960
+>>>>>>> bbf721473192e4c07ebb15fae0674cc4bf684b19:Assets/Prefabs.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

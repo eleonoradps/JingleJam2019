@@ -8,6 +8,12 @@ public class PlayerHorizMove : MonoBehaviour
 
     [SerializeField] private int sizeThreshold = 0;
 
+    [SerializeField] Sprite SmallSprite;
+
+    [SerializeField] Sprite MediumSprite;
+
+    [SerializeField] Sprite LargeSprite;
+
     private Rigidbody2D rb2d;
 
     private SpriteRenderer sprite;
@@ -25,17 +31,20 @@ public class PlayerHorizMove : MonoBehaviour
 
         if (sizeThreshold <= 10)
         {
-            sprite.color = new Color(255, 0, 0, 255);
+            //sprite.color = new Color(255, 0, 0, 255);
+            sprite.sprite = SmallSprite;
             maxSpeed = 15;
         }
         else if (sizeThreshold >= 11 && sizeThreshold <= 20)
         {
-            sprite.color = new Color(0, 255, 0, 255);
+            //sprite.color = new Color(0, 255, 0, 255);
+            sprite.sprite = MediumSprite;
             maxSpeed = 10;
         }
         else if (sizeThreshold >= 21)
         {
-            sprite.color = new Color(0, 0, 255, 255);
+            //sprite.color = new Color(0, 0, 255, 255);
+            sprite.sprite = LargeSprite;
             maxSpeed = 5;
         }
     }

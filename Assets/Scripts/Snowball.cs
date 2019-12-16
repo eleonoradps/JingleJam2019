@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class Snowball : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private float timer = 3f;
+    bool touchedGround = false;
+
+    private void Update()
     {
-        
+        if(touchedGround)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0f)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            timer = 3f;
+            touchedGround = true;
+        } 
     }
+
 }

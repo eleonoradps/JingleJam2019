@@ -11,11 +11,6 @@ public class PickUpGifts : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if(collider.gameObject.layer == LayerMask.NameToLayer("Player"))

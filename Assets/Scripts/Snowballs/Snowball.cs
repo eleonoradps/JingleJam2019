@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Snowball : MonoBehaviour
 {
-    private float timer = 3f;
+
+    float timer = 0.2f;
     bool touchedGround = false;
 
     private void Update()
@@ -23,9 +24,8 @@ public class Snowball : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
-            timer = 3f;
+            timer = 0.2f;
             touchedGround = true;
         } 
     }
-
 }

@@ -298,6 +298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minimum: -14
   maximum: -4
+  maximum2: 14
 --- !u!1 &1512971009
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,8 @@ public class platformBehaviour : MonoBehaviour
 
     [SerializeField] private float maximum = -2.0F;
 
+    [SerializeField] private float maximum2 = 14.0F;
+
 
     // starting value for the Lerp
     static float t = 0.0f;
@@ -36,9 +38,9 @@ public class platformBehaviour : MonoBehaviour
         if (t > 2.0f)
         {
             float temp = maximum;
-            maximum = minimum;
+            maximum = maximum2;
             minimum = temp;
-            t = 0.0f;
+            t = 0;
         }
     }
 }

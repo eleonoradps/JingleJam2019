@@ -29,19 +29,19 @@ public class PlayerHorizMove : MonoBehaviour
 
         increaseTest();
 
-        if (sizeThreshold <= 50)
+        if (sizeThreshold <= 10)
         {
             //sprite.color = new Color(255, 0, 0, 255);
             sprite.sprite = SmallSprite;
             maxSpeed = 15;
         }
-        else if (sizeThreshold >= 51 && sizeThreshold <= 100)
+        else if (sizeThreshold >= 11 && sizeThreshold <= 20)
         {
             //sprite.color = new Color(0, 255, 0, 255);
             sprite.sprite = MediumSprite;
             maxSpeed = 10;
         }
-        else if (sizeThreshold >= 101)
+        else if (sizeThreshold >= 21)
         {
             //sprite.color = new Color(0, 0, 255, 255);
             sprite.sprite = LargeSprite;

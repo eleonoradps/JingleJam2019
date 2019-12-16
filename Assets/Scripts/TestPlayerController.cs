@@ -9,9 +9,13 @@ public class TestPlayerController : MonoBehaviour
     private Rigidbody2D body;
     private Vector2 direction;
     private float speed = 3f;
+    [SerializeField] private float snowballSpeed = 10;
 
-    private int gift;
-    [SerializeField] private TextMeshProUGUI textGiftCounter;
+    private int gift; // à ajouter dans le player controller de Tristan
+    [SerializeField] private TextMeshProUGUI textGiftCounter; // à ajouter dans le player controller de Tristan
+
+    [SerializeField] GameObject prefabSnowball;
+    [SerializeField] Transform snowballSpawnPoint;
     
     void Start()
     {
@@ -26,9 +30,14 @@ public class TestPlayerController : MonoBehaviour
     void Update()
     {
         direction = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
+
+        if(Input.GetKeyDown(KeyCode.W))
+        {
+            GameObject snowball = Instantiate(prefabSnowball, snowballSpawnPoint);
+        }
     }
 
-    public void AddGift(int value)
+    public void AddGift(int value) // à ajouter dans le player controller de Tristan
     {
         gift += value;
         textGiftCounter.text = gift.ToString();

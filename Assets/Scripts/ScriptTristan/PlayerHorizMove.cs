@@ -63,5 +63,4 @@ public class PlayerHorizMove : MonoBehaviour
             sizeThreshold += 1;
         }
     }
-
 }

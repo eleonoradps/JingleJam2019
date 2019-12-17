@@ -7,10 +7,13 @@ public class PlayerMovement : MonoBehaviour
 	[SerializeField] private Rigidbody2D m_body;
 
 	[SerializeField] private Acceleration m_acceleration;
+	[SerializeField] private Situation m_situation;
 
 	[SerializeField] private float horizontalTreshold;
 
 	[SerializeField] private float speed;
+
+
 
 	private Vector2 left = new Vector2(-1, 0);
 	private Vector2 right = new Vector2(1, 0);
@@ -25,8 +28,14 @@ public class PlayerMovement : MonoBehaviour
 		Right
 	}
 
-    // Start is called before the first frame update
-    void Start()
+	private enum Situation
+	{
+		Grounded,
+		InAir
+	}
+
+	// Start is called before the first frame update
+	void Start()
     {
         
     }
@@ -54,17 +63,48 @@ public class PlayerMovement : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		switch (m_acceleration)
-			{
-			case Acceleration.None:
+		switch (m_situation)
+		{
+			case Situation.Grounded:
+				switch (m_acceleration)
+				{
+					case Acceleration.None:
+						break;
+
+					case Acceleration.Left:
+						m_body.AddForce(speed * left);
+						break;
+
+					case Acceleration.Right:
+						m_body.AddForce(speed * right);
+						break;
+				}
 				break;
 
-			case Acceleration.Left:
-				m_body.AddForce(speed * left);
-				break;
+			case Situation.InAir:
 
-			case Acceleration.Right:
-				m_body.AddForce(speed * right);
+				break;
+		}
+	}
+
+
+	private void OnCollisionExit2D(Collision2D collision)
+	{
+
+		switch (m_situation)
+		{
+			case Situation.Grounded:
+				m_situation = Situation.InAir;
+				break;
+		}
+	}
+
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		switch (m_situation)
+		{
+			case Situation.InAir:
+				m_situation = Situation.Grounded;
 				break;
 		}
 	}

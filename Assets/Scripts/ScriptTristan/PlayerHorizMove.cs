@@ -14,13 +14,19 @@ public class PlayerHorizMove : MonoBehaviour
 
     [SerializeField] private int threshold2Max = 20;
 
-    [SerializeField] private int threshold3 = 21;
+    [SerializeField] private int threshold3Min = 21;
+
+    [SerializeField] private int threshold3Max = 30;
+
+    [SerializeField] private int threshold4 = 31;
 
     [SerializeField] Sprite SmallSprite;
 
     [SerializeField] Sprite MediumSprite;
 
     [SerializeField] Sprite LargeSprite;
+
+    [SerializeField] Sprite SnowmanSprite;
 
     private Rigidbody2D rb2d;
 
@@ -34,32 +40,12 @@ public class PlayerHorizMove : MonoBehaviour
 
     private void Update()
     {
-
         increaseTest();
-
-        if (sizeValue <= threshold1)
-        {
-            //sprite.color = new Color(255, 0, 0, 255);
-            sprite.sprite = SmallSprite;
-            maxSpeed = 15;
-        }
-        else if (sizeValue >= threshold2Min && sizeValue <= threshold2Max)
-        {
-            //sprite.color = new Color(0, 255, 0, 255);
-            sprite.sprite = MediumSprite;
-            maxSpeed = 10;
-        }
-        else if (sizeValue >= threshold3)
-        {
-            //sprite.color = new Color(0, 0, 255, 255);
-            sprite.sprite = LargeSprite;
-            maxSpeed = 5;
-        }
     }
 
     void FixedUpdate()
     {
-        float x = Input.GetAxisRaw("Horizontal");
+        float x = Input.GetAxis("Horizontal");
         Vector3 move = new Vector3(x * maxSpeed, rb2d.velocity.y, 0f);
         rb2d.velocity = move;
     }
@@ -69,6 +55,30 @@ public class PlayerHorizMove : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             sizeValue += 1;
+
+            if (sizeValue <= threshold1)
+            {
+                //sprite.color = new Color(255, 0, 0, 255);
+                sprite.sprite = SmallSprite;
+                maxSpeed = 15;
+            }
+            else if (sizeValue >= threshold2Min && sizeValue <= threshold2Max)
+            {
+                //sprite.color = new Color(0, 255, 0, 255);
+                sprite.sprite = MediumSprite;
+                maxSpeed = 10;
+            }
+            else if (sizeValue >= threshold3Min && sizeValue <= threshold3Max)
+            {
+                //sprite.color = new Color(0, 0, 255, 255);
+                sprite.sprite = LargeSprite;
+                maxSpeed = 5;
+            }
+            else if (sizeValue >= threshold4)
+            {
+                sprite.sprite = SnowmanSprite;
+                maxSpeed = 1;
+            }
         }
     }
 }

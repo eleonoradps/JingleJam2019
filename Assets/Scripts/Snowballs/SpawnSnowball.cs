@@ -5,7 +5,12 @@ using UnityEngine;
 public class SpawnSnowball : MonoBehaviour
 {
     [SerializeField] GameObject[] prefabs;
-    bool snowBall = true;
+    private bool snowBall = true;
+    private float posXMin = -1000f;
+    private float posXMax = 1000f;
+    private float posXDivision = 100f;
+    private int posY = 7;
+    private int posZ = 0;
 
     void Start()
     {
@@ -22,8 +27,8 @@ public class SpawnSnowball : MonoBehaviour
         if (snowBall)
         {
             int prefab_num = Random.Range(0, prefabs.Length);
-            float posX = Random.Range(-1000, 1000) / 100.0f;
-            Instantiate(prefabs[prefab_num], new Vector3(posX, 7, 0), transform.rotation);
+            float posX = Random.Range(posXMin, posXMax) / posXDivision;
+            Instantiate(prefabs[prefab_num], new Vector3(posX, posY, posZ), transform.rotation);
         }
     }
 }

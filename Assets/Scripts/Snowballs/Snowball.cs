@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Snowball : MonoBehaviour
 {
-    float posY = -5;
+    float posY = -4.5f;
     private void Update()
     {
         if (this.transform.position.y <= posY)

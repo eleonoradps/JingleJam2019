@@ -28,8 +28,6 @@ public class PlayerHorizMove : MonoBehaviour
 
     [SerializeField] private Sprite SnowmanSprite;
 
-    private Transform Snowman;
-
     private Rigidbody2D rb2d;
 
     private SpriteRenderer sprite;
@@ -38,8 +36,6 @@ public class PlayerHorizMove : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
-        Snowman = this.GetComponent<Transform>();
-        //heightY = Snowman.position.y;
     }
 
     private void Update()
@@ -60,36 +56,29 @@ public class PlayerHorizMove : MonoBehaviour
         {
             sizeValue += 1;
 
-            float heightY = Snowman.position.y;
-
             if (sizeValue <= threshold1)
             {
                 //sprite.color = new Color(255, 0, 0, 255);
                 sprite.sprite = SmallSprite;
-                heightY = -4;
                 maxSpeed = 15;
             }
             else if (sizeValue >= threshold2Min && sizeValue <= threshold2Max)
             {
                 //sprite.color = new Color(0, 255, 0, 255);
                 sprite.sprite = MediumSprite;
-                heightY = -3.8f;
                 maxSpeed = 10;
             }
             else if (sizeValue >= threshold3Min && sizeValue <= threshold3Max)
             {
                 //sprite.color = new Color(0, 0, 255, 255);
                 sprite.sprite = LargeSprite;
-                heightY = -3.6f;
                 maxSpeed = 5;
             }
             else if (sizeValue >= threshold4)
             {
                 sprite.sprite = SnowmanSprite;
-                heightY = -3.4f;
                 maxSpeed = 1;
             }
-            Debug.Log(heightY);
         }
     }
 }

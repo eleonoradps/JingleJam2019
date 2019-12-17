@@ -6,7 +6,15 @@ public class PlayerHorizMove : MonoBehaviour
 {
     [SerializeField] private int maxSpeed = 5;
 
-    [SerializeField] private int sizeThreshold = 0;
+    [SerializeField] private int sizeValue = 0;
+
+    [SerializeField] private int threshold1 = 10;
+
+    [SerializeField] private int threshold2Min = 11;
+
+    [SerializeField] private int threshold2Max = 20;
+
+    [SerializeField] private int threshold3 = 21;
 
     [SerializeField] Sprite SmallSprite;
 
@@ -29,19 +37,19 @@ public class PlayerHorizMove : MonoBehaviour
 
         increaseTest();
 
-        if (sizeThreshold <= 10)
+        if (sizeValue <= threshold1)
         {
             //sprite.color = new Color(255, 0, 0, 255);
             sprite.sprite = SmallSprite;
             maxSpeed = 15;
         }
-        else if (sizeThreshold >= 11 && sizeThreshold <= 20)
+        else if (sizeValue >= threshold2Min && sizeValue <= threshold2Max)
         {
             //sprite.color = new Color(0, 255, 0, 255);
             sprite.sprite = MediumSprite;
             maxSpeed = 10;
         }
-        else if (sizeThreshold >= 21)
+        else if (sizeValue >= threshold3)
         {
             //sprite.color = new Color(0, 0, 255, 255);
             sprite.sprite = LargeSprite;
@@ -60,7 +68,7 @@ public class PlayerHorizMove : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            sizeThreshold += 1;
+            sizeValue += 1;
         }
     }
 }

@@ -299,6 +299,8 @@ MonoBehaviour:
   minimum: -14
   maximum: -4
   maximum2: 14
+  timeToWait: 2
+  timeInterpolater: 0.2
 --- !u!1 &1512971009
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,7 +396,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 5
-  sizeThreshold: 0
+  sizeValue: 0
+  threshold1: 10
+  threshold2Min: 11
+  threshold2Max: 20
+  threshold3: 20
   SmallSprite: {fileID: 21300000, guid: 91e3af099fec40141890b9c765427dbd, type: 3}
   MediumSprite: {fileID: 21300000, guid: c4fcfc60a53e2814b8b10b66b370f6c1, type: 3}
   LargeSprite: {fileID: 21300000, guid: 312c4f87c4515614e9061cfc31748c57, type: 3}

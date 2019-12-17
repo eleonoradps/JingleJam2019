@@ -17,7 +17,7 @@ TagManager:
   - Gift
   - Player
   - SnowBullet
-  - 
+  - Background
   - 
   - 
   - 
@@ -38,9 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
+  - name: Background
+    uniqueID: 2015818827
     locked: 0
   - name: Ground
     uniqueID: 1353814751
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0

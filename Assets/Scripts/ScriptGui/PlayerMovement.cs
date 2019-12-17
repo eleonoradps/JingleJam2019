@@ -12,14 +12,17 @@ public class PlayerMovement : MonoBehaviour
 	[SerializeField] private float horizontalTreshold;
 
 	[SerializeField] private float speed;
-
-
+	[SerializeField] private float airSpeed;
 
 	private Vector2 left = new Vector2(-1, 0);
 	private Vector2 right = new Vector2(1, 0);
 
 	private Vector2 m_velocity;
 	private Vector2 maxSpeed;
+
+	private int score;
+	private int size;
+
 
 	private enum Acceleration
 	{
@@ -34,13 +37,6 @@ public class PlayerMovement : MonoBehaviour
 		InAir
 	}
 
-	// Start is called before the first frame update
-	void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
 		float horizontal = Input.GetAxis("Horizontal");
@@ -82,11 +78,22 @@ public class PlayerMovement : MonoBehaviour
 				break;
 
 			case Situation.InAir:
+				switch (m_acceleration)
+				{
+					case Acceleration.None:
+						break;
 
+					case Acceleration.Left:
+						m_body.AddForce(airSpeed * left);
+						break;
+
+					case Acceleration.Right:
+						m_body.AddForce(airSpeed * right);
+						break;
+				}
 				break;
 		}
 	}
-
 
 	private void OnCollisionExit2D(Collision2D collision)
 	{
@@ -107,5 +114,15 @@ public class PlayerMovement : MonoBehaviour
 				m_situation = Situation.Grounded;
 				break;
 		}
+	}
+
+	public void AddScore(int value)
+	{
+		score += value;
+	}
+
+	public void AddSize(int value)
+	{
+		size += value;
 	}
 }

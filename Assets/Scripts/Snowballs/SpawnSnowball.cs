@@ -9,7 +9,7 @@ public class SpawnSnowball : MonoBehaviour
     private float posXMin = -1000f;
     private float posXMax = 1000f;
     private float posXDivision = 100f;
-    private int posY = 7;
+	private int posY = 7;
     private int posZ = 0;
 
     void Start()

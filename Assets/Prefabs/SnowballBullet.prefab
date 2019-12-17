@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f44ffabde248c3d4fbab9d51a66aead3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 91e3af099fec40141890b9c765427dbd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -115,3 +115,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5504d8ff60f3da488ce9d8ec3257de9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snowballDamage: 5

@@ -15,10 +15,10 @@ public class SpawnGifts : MonoBehaviour
     void Start()
     {
         gift = true;
-        StartCoroutine(coroutineExample());
+        StartCoroutine(CoroutineExample());
     }
 
-    IEnumerator coroutineExample()
+    IEnumerator CoroutineExample()
     {
         while (gift)
         {

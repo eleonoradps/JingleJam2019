@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2259131645650894496}
   - component: {fileID: 2259131645650894503}
   - component: {fileID: 2259131645650894502}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlayerSnowball
   m_TagString: Untagged
   m_Icon: {fileID: 0}

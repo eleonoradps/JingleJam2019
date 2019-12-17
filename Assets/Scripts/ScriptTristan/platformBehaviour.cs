@@ -17,19 +17,19 @@ public class platformBehaviour : MonoBehaviour
     // starting value for the Lerp
     static float t = 0.0f;
 
-    private Transform isOK;
+    private Transform platformTransform;
 
     // Start is called before the first frame update
     void Start()
     {
-        isOK = GetComponent<Transform>();
+        platformTransform = GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
         // animate the position of the game object...
-        isOK.position = new Vector2(Mathf.Lerp(minimum, maximum, t), isOK.position.y);
+        platformTransform.position = new Vector2(Mathf.Lerp(minimum, maximum, t), platformTransform.position.y);
 
         // .. and increase the t interpolater
         t += timeInterpolater * Time.deltaTime;

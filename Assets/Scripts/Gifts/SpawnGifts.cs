@@ -8,7 +8,7 @@ public class SpawnGifts : MonoBehaviour
     private bool gift = true;
     private float posXMin = -9f;
     private float posXMax = 9f;
-    private int posY = 7;
+    private float posY = 5.26f;
     private int posZ = 0;
 
 

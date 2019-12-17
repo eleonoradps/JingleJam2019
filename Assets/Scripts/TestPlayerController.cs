@@ -31,7 +31,7 @@ public class TestPlayerController : MonoBehaviour
     {
         direction = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
 
-        if(Input.GetAxis("Fire1") > 0.1f)
+        if(Input.GetAxis("Fire1") > 0.1f) // à ajouter dans player controller de Tristan
         {
             GameObject snowball = Instantiate(prefabSnowball, snowballSpawnPoint);
             snowball.transform.parent = null;

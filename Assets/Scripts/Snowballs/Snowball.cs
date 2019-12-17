@@ -4,28 +4,12 @@ using UnityEngine;
 
 public class Snowball : MonoBehaviour
 {
-
-    float timer = 0.2f;
-    bool touchedGround = false;
-
+    float posY = -5;
     private void Update()
     {
-        if(touchedGround)
+        if (this.transform.position.y <= posY)
         {
-            timer -= Time.deltaTime;
-            if (timer <= 0f)
-            {
-                Destroy(gameObject);
-            }
+            Destroy(gameObject);
         }
-    }
-
-    public void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
-        {
-            timer = 0.2f;
-            touchedGround = true;
-        } 
     }
 }

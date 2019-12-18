@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3698746685874927422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3698746685874927420}
+  - component: {fileID: 3698746685874927421}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3698746685874927420
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3698746685874927422}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.478542, y: 10.09, z: -128.42969}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3698746685874927421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3698746685874927422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fac95646d1274da46a981ee01ca8ed20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 7090629269879838349, guid: 92db0919517fa6d44a9190a7eefe40e1, type: 3}
+  - {fileID: 8000191907152309196, guid: f78b8c1fc3839e749aaa499a7d10f9c2, type: 3}
+  - {fileID: 8000191907152309196, guid: f78b8c1fc3839e749aaa499a7d10f9c2, type: 3}
+  - {fileID: 8000191907152309196, guid: f78b8c1fc3839e749aaa499a7d10f9c2, type: 3}
+  - {fileID: 8000191907152309196, guid: f78b8c1fc3839e749aaa499a7d10f9c2, type: 3}
+  - {fileID: 8000191907152309196, guid: f78b8c1fc3839e749aaa499a7d10f9c2, type: 3}
+  - {fileID: 8000191907152309196, guid: f78b8c1fc3839e749aaa499a7d10f9c2, type: 3}
+  - {fileID: 8000191907152309196, guid: f78b8c1fc3839e749aaa499a7d10f9c2, type: 3}
+  - {fileID: 8000191907152309196, guid: f78b8c1fc3839e749aaa499a7d10f9c2, type: 3}
+  - {fileID: 8000191907152309196, guid: f78b8c1fc3839e749aaa499a7d10f9c2, type: 3}
+  posXMin: -20
+  posXMax: 20
+  spawnRate: 0.01

@@ -143,11 +143,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snowball: {fileID: 7090629269304681019}
-  fallSpeed: 1
+  fallSpeed: 2
   oscSpeed: 1
   oscRange: 1
   m_body: {fileID: 7090629269879838351}
-  value: 6
+  value: 3
 --- !u!50 &7090629269879838351
 Rigidbody2D:
   serializedVersion: 4

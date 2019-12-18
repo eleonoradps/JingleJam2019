@@ -194,7 +194,7 @@ public class PlayerMovement : MonoBehaviour
 		score += value;
 	}
 
-	public void AddSize(int value)
+	public void AddSize(float value)
 	{
 		size += value;
 		if (size <= min)

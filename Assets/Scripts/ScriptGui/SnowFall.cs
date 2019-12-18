@@ -10,7 +10,7 @@ public class SnowFall : MonoBehaviour
 	[SerializeField] private float oscSpeed;
 	[SerializeField] private float oscRange;
 	[SerializeField] private Rigidbody2D m_body;
-	[SerializeField] private int value;
+	[SerializeField] private float value;
 	private float time;
 
 	private int min = 0;

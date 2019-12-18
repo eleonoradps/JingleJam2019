@@ -6,11 +6,11 @@ public class GiftBehaviour : MonoBehaviour
 {
 
 	[SerializeField] private int value;
-	[SerializeField] private float fallingSpeed;
+	[SerializeField] private float fallingSpeed = 5;
 	[SerializeField] private Rigidbody2D m_body;
 
 	[SerializeField] private float timer = 0.0f;
-	[SerializeField] private float timerDuration;
+	[SerializeField] private float timerDuration = 2;
 
 	[SerializeField] private SpriteRenderer m_sprite;
 
@@ -39,14 +39,14 @@ public class GiftBehaviour : MonoBehaviour
 	{
 		if (!grounded)
 		{
-			if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+			if (collision.gameObject.layer == LayerMask.NameToLayer("Ground0"))
 			{
-				m_body.velocity = Vector2.zero;
+				m_body.velocity = new Vector2(0,0);
 				grounded = true;
 			}
 		}
 
-		if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+		if (collision.gameObject.layer == LayerMask.NameToLayer("Player") && collision.gameObject.tag != "Bullet")
 		{		
 			collision.GetComponentInParent<PlayerMovement>().AddScore(value);
 			Destroy(gameObject);

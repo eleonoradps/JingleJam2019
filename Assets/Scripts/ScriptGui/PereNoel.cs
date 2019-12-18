@@ -146,7 +146,8 @@ public class PereNoel : MonoBehaviour
 
 	void SpawnGift()
 	{
-		Instantiate(gift, transform);
+		GameObject dropedGift = Instantiate(gift, transform);
+		dropedGift.transform.parent = null;
 	}
 
 	void RandomizeSpeed()

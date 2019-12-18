@@ -12,8 +12,12 @@ public class Canon : MonoBehaviour
 
     [SerializeField] private float timeInterpolater = 0.2f;
 
+    private AudioSource audioSource;
+    private AudioClip audioClip;
+
     // starting value for the Lerp
     static float t = 0.0f;
+    static float t2 = 0.0f;
 
     private Transform transformCanon;
 
@@ -21,6 +25,7 @@ public class Canon : MonoBehaviour
     void Start()
     {
         transformCanon = GetComponent<Transform>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -31,6 +36,7 @@ public class Canon : MonoBehaviour
 
         // .. and increase the t interpolater
         t += timeInterpolater * Time.deltaTime;
+        t2 += timeInterpolater * Time.deltaTime;
 
         // now check if the interpolator has reached 1.0
         // and swap maximum and minimum so game object moves
@@ -41,6 +47,12 @@ public class Canon : MonoBehaviour
             maximum = minimum;
             minimum = temp;
             t = 0;
+        }
+
+        if (t2 > timeToWait)
+        {
+            audioSource.Play();//play(sound)
+            t2 = 0;
         }
     }
 }

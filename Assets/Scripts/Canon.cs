@@ -13,7 +13,6 @@ public class Canon : MonoBehaviour
     [SerializeField] private float timeInterpolater = 0.2f;
 
     private AudioSource audioSource;
-    private AudioClip audioClip;
 
     // starting value for the Lerp
     static float t = 0.0f;

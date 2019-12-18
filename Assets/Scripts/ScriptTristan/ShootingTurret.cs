@@ -23,6 +23,8 @@ public class ShootingTurret : MonoBehaviour
 
     private float posY = 13f;
 
+    [SerializeField] private AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +49,7 @@ public class ShootingTurret : MonoBehaviour
 
     void Shoot()
     {
+        audioSource.Play();
         GameObject snowball1 = Instantiate(prefabShoot, shootSpawnPointL);
 
         GameObject snowball2 = Instantiate(prefabShoot, shootSpawnPointR);

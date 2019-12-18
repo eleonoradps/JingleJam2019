@@ -27,8 +27,8 @@ public class PereNoel : MonoBehaviour
 	private Rigidbody2D m_body;
 
 	private Vector3 right = new Vector3(1, 0, 0);
-	private Vector3 goingRight = new Vector3(1, 1, 1);
-	private Vector3 goingLeft = new Vector3(-1, 1, 1);
+	private Vector3 goingRight = new Vector3(0.5f, 0.5f, 1);
+	private Vector3 goingLeft = new Vector3(-0.5f, 0.5f, 1);
 
 	private SpriteRenderer m_sprite;
 

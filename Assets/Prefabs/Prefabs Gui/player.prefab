@@ -73,15 +73,15 @@ MonoBehaviour:
   m_acceleration: 0
   m_situation: 0
   horizontalTreshold: 0.5
-  speed: 35
+  speed: 25
   airSpeedRatio: 0.3
   size: 0
   min: 1
   max: 40
-  divider: 4
+  divider: 8
   scaller: 1
   thresholdMedium: 10
-  thresholdBig: 11
+  thresholdBig: 20
   thresholdTooBig: 30
   SmallSprite: {fileID: -6874504565857425583, guid: e410a620621f39b4b907d010a570e6cf,
     type: 3}
@@ -95,9 +95,9 @@ MonoBehaviour:
   prefabSnowball: {fileID: 4720361514879348619, guid: 7159b26c4e86e84449b145c38ef141cf,
     type: 3}
   snowballSpawnPoint: {fileID: 3334407429499783436}
-  speedMedium: 30
-  speedBig: 20
-  speedTooBig: 10
+  speedMedium: 18
+  speedBig: 12
+  speedTooBig: 5
   m_collider: {fileID: 1106963167594770501}
   spriteHolder: {fileID: 7094096771677934531}
   shotCost: 1

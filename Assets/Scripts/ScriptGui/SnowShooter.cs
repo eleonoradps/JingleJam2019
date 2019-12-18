@@ -34,7 +34,7 @@ public class SnowShooter : MonoBehaviour
 			cooldownTimer = 0;
 			GameObject shotSnowball = Instantiate(snowball, transform.position, Quaternion.identity);
 			shotSnowball.transform.parent = null;
-			shotSnowball.transform.localScale = Vector3.one;
+			shotSnowball.transform.localScale = Vector3.one/2;
 
 			shotSnowball.GetComponent<Rigidbody2D>().velocity = Vector2.up * snowballSpeed;
 			Destroy(shotSnowball, 2);

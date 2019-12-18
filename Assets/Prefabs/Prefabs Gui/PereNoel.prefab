@@ -53,7 +53,7 @@ MonoBehaviour:
   baseOscRange: 2
   oscSpeed: 3
   speed: 15
-  maxSpeed: 30
+  maxSpeed: 20
   minSpeed: 12
   maxOsc: 4
   minOsc: 1

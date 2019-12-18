@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
 	private float collSmall = 1;
 	private float collMedium = 0.65f;
 	private float collBig = 0.35f;
-	private float collTooBig = 0.25f;
+	private float collTooBig = 0.3f;
 
 	[SerializeField] private GameObject spriteHolder;
 

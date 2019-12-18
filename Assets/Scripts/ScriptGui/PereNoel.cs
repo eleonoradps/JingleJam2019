@@ -30,11 +30,12 @@ public class PereNoel : MonoBehaviour
 	[SerializeField] private bool blinking = false;
 	private bool blinkState = false;
 	private float blinkDurationTimer;
-	private float currentBlinkDuration = 5;
+	private float currentBlinkDuration;
+
+	[SerializeField] private float blinkHitDuration;
 
 	private Color baseColor;
 	[SerializeField] private Color blinkColor;
-	[SerializeField] private float hitBlinkDuration;
 
 
 	void Start()
@@ -94,6 +95,21 @@ public class PereNoel : MonoBehaviour
 					m_sprite.color = blinkColor;
 				}
 			}
+		}
+	}
+
+	private void GetHit()
+	{
+		currentBlinkDuration = blinkHitDuration;
+		blinking = true;
+	}
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (collision.gameObject.layer == LayerMask.NameToLayer("SnowBullet"))
+		{
+			GetHit();
+			Destroy(collision.gameObject);
 		}
 	}
 }

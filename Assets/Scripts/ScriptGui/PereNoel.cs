@@ -37,6 +37,12 @@ public class PereNoel : MonoBehaviour
 	private Color baseColor;
 	[SerializeField] private Color blinkColor;
 
+	[SerializeField] private GameObject gift;
+
+	private int dropCounter = 0;
+
+	[SerializeField] private int hitsToDrop;
+	[SerializeField] private int totalHp;
 
 	void Start()
     {
@@ -102,6 +108,13 @@ public class PereNoel : MonoBehaviour
 	{
 		currentBlinkDuration = blinkHitDuration;
 		blinking = true;
+		dropCounter += 1;
+		totalHp -= 1;
+		if (dropCounter == hitsToDrop)
+		{
+			SpawnGift();
+			dropCounter = 0;
+		}
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
@@ -111,5 +124,10 @@ public class PereNoel : MonoBehaviour
 			GetHit();
 			Destroy(collision.gameObject);
 		}
+	}
+
+	void SpawnGift()
+	{
+		Instantiate(gift, transform);
 	}
 }

@@ -63,6 +63,8 @@ public class PlayerMovement : MonoBehaviour
 
 	[SerializeField] private GameObject spriteHolder;
 
+
+	[SerializeField] private float shotCost;
 	private enum Acceleration
 	{
 		None,
@@ -239,5 +241,19 @@ public class PlayerMovement : MonoBehaviour
 			m_size = Size.Toobig;
 			spriteHolder.transform.localScale = Vector3.one * collTooBig;
 		}
+	}
+
+	public bool HaveMass()
+	{
+		if (size > shotCost)
+			return true;
+		else
+		return false;
+	}
+
+	public void LoseMass()
+	{
+		size -= shotCost;
+		checkSize();
 	}
 }

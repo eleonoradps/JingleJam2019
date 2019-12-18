@@ -99,6 +99,7 @@ MonoBehaviour:
   speedTooBig: 10
   m_collider: {fileID: 1106963167594770501}
   spriteHolder: {fileID: 7094096771677934531}
+  shotCost: 1
 --- !u!58 &1106963167594770501
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -131,6 +132,7 @@ MonoBehaviour:
     type: 3}
   snowballSpeed: 14
   shootCooldown: 0.4
+  m_player: {fileID: 3334407429499783443}
 --- !u!1 &7094096771677934531
 GameObject:
   m_ObjectHideFlags: 0

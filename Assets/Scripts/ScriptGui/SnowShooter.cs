@@ -13,10 +13,7 @@ public class SnowShooter : MonoBehaviour
 	private float cooldownTimer = 0.0f;
 	private bool shootReady = true;
 
-    void Start()
-    {
-        
-    }
+	[SerializeField] private PlayerMovement m_player;
 
     void Update()
     {
@@ -30,8 +27,9 @@ public class SnowShooter : MonoBehaviour
 			shootReady = true;
 		}
 
-		if (Input.GetAxis("Fire1") > 0.1f && shootReady)
+		if (Input.GetAxis("Fire1") > 0.1f && shootReady && m_player.HaveMass())
 		{
+			m_player.LoseMass();
 			shootReady = false;
 			cooldownTimer = 0;
 			GameObject shotSnowball = Instantiate(snowball, transform.position, Quaternion.identity);
@@ -42,6 +40,4 @@ public class SnowShooter : MonoBehaviour
 			Destroy(shotSnowball, 2);
 		}
 	}
-
-
 }

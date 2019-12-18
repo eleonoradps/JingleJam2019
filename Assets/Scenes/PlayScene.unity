@@ -1098,6 +1098,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3698746685874927421, guid: 3ade0653a20e4fb449ee710e3aa60d21,
+        type: 3}
+      propertyPath: spawnRate
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698746685874927421, guid: 3ade0653a20e4fb449ee710e3aa60d21,
+        type: 3}
+      propertyPath: posXMin
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698746685874927421, guid: 3ade0653a20e4fb449ee710e3aa60d21,
+        type: 3}
+      propertyPath: posXMax
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3698746685874927422, guid: 3ade0653a20e4fb449ee710e3aa60d21,
         type: 3}
       propertyPath: m_Name

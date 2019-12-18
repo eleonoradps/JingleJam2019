@@ -52,7 +52,7 @@ public class PlayerHorizMove : MonoBehaviour
     private void Update()
     {
         checkSize();
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButtonDown("Fire1"))
         {
             GameObject snowball = Instantiate(prefabSnowball, snowballSpawnPoint);
 
@@ -72,19 +72,16 @@ public class PlayerHorizMove : MonoBehaviour
     {
         if (sizeValue <= threshold1)
         {
-            //sprite.color = new Color(255, 0, 0, 255);
             sprite.sprite = SmallSprite;
             maxSpeed = 15;
         }
         else if (sizeValue >= threshold2Min && sizeValue <= threshold2Max)
         {
-            //sprite.color = new Color(0, 255, 0, 255);
             sprite.sprite = MediumSprite;
             maxSpeed = 10;
         }
         else if (sizeValue >= threshold3Min && sizeValue <= threshold3Max)
         {
-            //sprite.color = new Color(0, 0, 255, 255);
             sprite.sprite = LargeSprite;
             maxSpeed = 5;
         }

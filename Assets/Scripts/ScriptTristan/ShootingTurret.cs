@@ -9,12 +9,6 @@ public class ShootingTurret : MonoBehaviour
 
     [SerializeField] Transform shootSpawnPointR;
 
-    [SerializeField] Transform shootSpawnPointUp1;
-
-    [SerializeField] Transform shootSpawnPointUp2;
-
-    [SerializeField] Transform shootSpawnPointUp3;
-
     private float shootSpeed = 8;
 
     private Rigidbody2D rb2d;

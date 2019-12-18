@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3334407429499783443}
   - component: {fileID: 1106963167594770501}
   - component: {fileID: 1474526380738190944}
+  - component: {fileID: 7176548726269984004}
   m_Layer: 10
   m_Name: player
   m_TagString: Untagged
@@ -133,6 +134,22 @@ MonoBehaviour:
   snowballSpeed: 14
   shootCooldown: 0.4
   m_player: {fileID: 3334407429499783443}
+--- !u!58 &7176548726269984004
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3334407429499783441}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.2
 --- !u!1 &7094096771677934531
 GameObject:
   m_ObjectHideFlags: 0

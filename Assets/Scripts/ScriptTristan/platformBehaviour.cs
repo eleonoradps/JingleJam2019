@@ -14,6 +14,8 @@ public class platformBehaviour : MonoBehaviour
 
     [SerializeField] private float timeInterpolater = 0.2f;
 
+    private int layerEnemy = 14;
+
     // starting value for the Lerp
     static float t = 0.0f;
 
@@ -45,4 +47,15 @@ public class platformBehaviour : MonoBehaviour
             t = 0;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.layer == LayerMask.NameToLayer("SnowBullet"))
+        {
+            col.gameObject.layer = layerEnemy;
+            col.gameObject.GetComponent<Rigidbody2D>().velocity *= -1;
+        }
+    }
+
+
 }

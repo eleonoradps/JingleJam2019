@@ -391,7 +391,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -182}
+  m_AnchoredPosition: {x: 0, y: -167}
   m_SizeDelta: {x: 243.51, y: 170.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &495610062
@@ -539,7 +539,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "PROG : Duncan, Tristan, Solange, Lorna\nGAME ART : D\xE9vran\nAUDIO : Ashley"
+  m_text: "PROG : Duncan, Tristan, Solange, Guillaume, Lorna\nGAME ART : D\xE9vran\nAUDIO
+    : Ashley"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -608,10 +609,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 674697933}
-    characterCount: 71
+    characterCount: 82
     spriteCount: 0
-    spaceCount: 12
-    wordCount: 10
+    spaceCount: 13
+    wordCount: 11
     linkCount: 0
     lineCount: 4
     pageCount: 1
@@ -674,7 +675,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000061989, y: 35}
+  m_AnchoredPosition: {x: 0.0000061989, y: 34}
   m_SizeDelta: {x: 737.2, y: 526.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &993395859
@@ -791,7 +792,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000011444, y: 195}
+  m_AnchoredPosition: {x: -0.000011444, y: 184}
   m_SizeDelta: {x: 294.2, y: 184.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1336331334
@@ -1028,7 +1029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}

@@ -2419,6 +2419,30 @@ PrefabInstance:
       propertyPath: snowballSpawnPoint
       value: 
       objectReference: {fileID: 1561348068}
+    - target: {fileID: 2259131645650894502, guid: 0ead216d06ef7be45886ef2a52614f5e,
+        type: 3}
+      propertyPath: LargeSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8f2a4fadb4db95a4487e5e0f80c05d93,
+        type: 3}
+    - target: {fileID: 2259131645650894502, guid: 0ead216d06ef7be45886ef2a52614f5e,
+        type: 3}
+      propertyPath: MediumSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: df636f0c56c1a274d8c7c2c5eb5d87b9,
+        type: 3}
+    - target: {fileID: 2259131645650894502, guid: 0ead216d06ef7be45886ef2a52614f5e,
+        type: 3}
+      propertyPath: SmallSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fca4432146ee4e24fa435b70045cf3cc,
+        type: 3}
+    - target: {fileID: 2259131645650894502, guid: 0ead216d06ef7be45886ef2a52614f5e,
+        type: 3}
+      propertyPath: SnowmanSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2f1d94aefcec8c0418531c7818287295,
+        type: 3}
     - target: {fileID: 2259131645650894503, guid: 0ead216d06ef7be45886ef2a52614f5e,
         type: 3}
       propertyPath: m_Simulated

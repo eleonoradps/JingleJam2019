@@ -48,7 +48,7 @@ public class GiftBehaviour : MonoBehaviour
 
 		if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
 		{		
-			collision.GetComponent<PlayerMovement>().AddScore(value);
+			collision.GetComponentInParent<PlayerMovement>().AddScore(value);
 			Destroy(gameObject);
 		}
 	}

@@ -3098,7 +3098,7 @@ PrefabInstance:
     - target: {fileID: 1474526380738190944, guid: dbc1f0403035db747a84c6d840a04369,
         type: 3}
       propertyPath: shootCooldown
-      value: 0.2
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3334407429499783436, guid: dbc1f0403035db747a84c6d840a04369,
         type: 3}
@@ -3169,6 +3169,11 @@ PrefabInstance:
         type: 3}
       propertyPath: divider
       value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334407429499783443, guid: dbc1f0403035db747a84c6d840a04369,
+        type: 3}
+      propertyPath: shotCost
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7176548726269984004, guid: dbc1f0403035db747a84c6d840a04369, type: 3}

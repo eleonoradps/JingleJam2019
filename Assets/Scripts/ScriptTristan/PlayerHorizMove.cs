@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerHorizMove : MonoBehaviour
 {
@@ -28,9 +29,19 @@ public class PlayerHorizMove : MonoBehaviour
 
     [SerializeField] private Sprite SnowmanSprite;
 
+    [SerializeField] private TextMeshProUGUI textGiftCounter;
+
+    [SerializeField] GameObject prefabSnowball;
+
+    [SerializeField] Transform snowballSpawnPoint;
+
     private Rigidbody2D rb2d;
 
     private SpriteRenderer sprite;
+
+    private int gift;
+
+    private float snowballSpeed = 10;
 
     void Start()
     {
@@ -40,7 +51,14 @@ public class PlayerHorizMove : MonoBehaviour
 
     private void Update()
     {
-        increaseTest();
+        checkSize();
+        if (Input.GetButtonDown("Fire1"))
+        {
+            GameObject snowball = Instantiate(prefabSnowball, snowballSpawnPoint);
+
+            snowball.GetComponent<Rigidbody2D>().velocity = Vector2.up * snowballSpeed;
+            Destroy(snowball, 1);
+        }
     }
 
     void FixedUpdate()
@@ -50,35 +68,38 @@ public class PlayerHorizMove : MonoBehaviour
         rb2d.velocity = move;
     }
 
-    void increaseTest()
+    void checkSize()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (sizeValue <= threshold1)
         {
-            sizeValue += 1;
-
-            if (sizeValue <= threshold1)
-            {
-                //sprite.color = new Color(255, 0, 0, 255);
-                sprite.sprite = SmallSprite;
-                maxSpeed = 15;
-            }
-            else if (sizeValue >= threshold2Min && sizeValue <= threshold2Max)
-            {
-                //sprite.color = new Color(0, 255, 0, 255);
-                sprite.sprite = MediumSprite;
-                maxSpeed = 10;
-            }
-            else if (sizeValue >= threshold3Min && sizeValue <= threshold3Max)
-            {
-                //sprite.color = new Color(0, 0, 255, 255);
-                sprite.sprite = LargeSprite;
-                maxSpeed = 5;
-            }
-            else if (sizeValue >= threshold4)
-            {
-                sprite.sprite = SnowmanSprite;
-                maxSpeed = 1;
-            }
+            sprite.sprite = SmallSprite;
+            maxSpeed = 15;
         }
+        else if (sizeValue >= threshold2Min && sizeValue <= threshold2Max)
+        {
+            sprite.sprite = MediumSprite;
+            maxSpeed = 10;
+        }
+        else if (sizeValue >= threshold3Min && sizeValue <= threshold3Max)
+        {
+            sprite.sprite = LargeSprite;
+            maxSpeed = 5;
+        }
+        else if (sizeValue >= threshold4)
+        {
+            sprite.sprite = SnowmanSprite;
+            maxSpeed = 1;
+        }
+    }
+
+    public void GrowSize(int snowValue)
+    {
+        sizeValue += snowValue;
+    }
+
+    public void CollectGift(int giftValue)
+    {
+        gift += giftValue;
+        textGiftCounter.text = gift.ToString();
     }
 }

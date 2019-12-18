@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6933560940875545413}
   - component: {fileID: 8936704608999937986}
   - component: {fileID: 60305425754683253}
-  - component: {fileID: 5353173376984900839}
-  m_Layer: 0
+  - component: {fileID: 3242486359348237205}
+  m_Layer: 11
   m_Name: SnowballBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4720361514879348619}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3811, y: 1.5554001, z: 0}
-  m_LocalScale: {x: 0.355, y: 0.3455, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -68,8 +68,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2015818827
-  m_SortingLayer: -2
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 91e3af099fec40141890b9c765427dbd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -103,16 +103,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5353173376984900839
-MonoBehaviour:
+--- !u!58 &3242486359348237205
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4720361514879348619}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5504d8ff60f3da488ce9d8ec3257de9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  snowballDamage: 5
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5

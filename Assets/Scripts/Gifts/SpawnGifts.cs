@@ -11,7 +11,6 @@ public class SpawnGifts : MonoBehaviour
     private float posY = 5.26f;
     private int posZ = 0;
 
-
     void Start()
     {
         gift = true;

@@ -9,9 +9,18 @@ public class PereNoel : MonoBehaviour
 	[SerializeField] private float lowerMotionRange;
 	[SerializeField] private float higherMotionRange;
 
-	[SerializeField] private float motionSpeed;
+	[SerializeField] private float baseMotionSpeed;
+	[SerializeField] private float baseOscSpeed;
+	[SerializeField] private float baseOscRange;
+
 	[SerializeField] private float oscSpeed;
-	[SerializeField] private float oscRange;
+	[SerializeField] private float speed;
+
+	[SerializeField] private float maxSpeed;
+	[SerializeField] private float minSpeed;
+
+	[SerializeField] private float maxOsc;
+	[SerializeField] private float minOsc;
 
 	private float initialHeight;
 
@@ -23,7 +32,7 @@ public class PereNoel : MonoBehaviour
 
 	private SpriteRenderer m_sprite;
 
-	private float blinkDelay = 0.1f;
+	private float blinkDelay = 0.04f;
 	private float blinkDelayTimer = 0.0f;
 
 
@@ -49,7 +58,7 @@ public class PereNoel : MonoBehaviour
 		m_sprite = GetComponent<SpriteRenderer>();
 		m_body = GetComponent<Rigidbody2D>();
 		initialHeight = transform.position.y;
-		m_body.velocity = - motionSpeed * right;
+		m_body.velocity = - baseMotionSpeed * right;
 		transform.localScale = goingLeft;
 		baseColor = m_sprite.color;
 	}
@@ -59,17 +68,21 @@ public class PereNoel : MonoBehaviour
     {
 		if (transform.position.x < lowerMotionRange)
 		{
-			m_body.velocity = motionSpeed * right;
+			RandomizeSpeed();
+			RandomizeOsc();
+			m_body.velocity = speed * right;
 			transform.localScale = goingRight;
 		}
 
 		if (transform.position.x > higherMotionRange)
 		{
-			m_body.velocity = - motionSpeed * right;
+			RandomizeSpeed();
+			RandomizeOsc();
+			m_body.velocity = - speed * right;
 			transform.localScale = goingLeft;
 		}
 
-		float osc = Mathf.Sin(Time.time * oscSpeed) * oscRange;
+		float osc = Mathf.Sin(Time.time * oscSpeed) * baseOscRange;
 		transform.position = new Vector3(transform.position.x, initialHeight + osc, 0);
 
 
@@ -102,10 +115,15 @@ public class PereNoel : MonoBehaviour
 				}
 			}
 		}
+		else
+		{
+			m_sprite.color = baseColor;
+		}
 	}
 
 	private void GetHit()
 	{
+		RandomizeSpeed();
 		currentBlinkDuration = blinkHitDuration;
 		blinking = true;
 		dropCounter += 1;
@@ -129,5 +147,14 @@ public class PereNoel : MonoBehaviour
 	void SpawnGift()
 	{
 		Instantiate(gift, transform);
+	}
+
+	void RandomizeSpeed()
+	{
+		speed = Random.Range(minSpeed, maxSpeed);
+	}
+	void RandomizeOsc()
+	{
+		oscSpeed = Random.Range(minOsc, maxOsc);
 	}
 }

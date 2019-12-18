@@ -48,9 +48,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lowerMotionRange: -25
   higherMotionRange: 25
-  motionSpeed: 15
+  baseMotionSpeed: 15
+  baseOscSpeed: 1
+  baseOscRange: 2
   oscSpeed: 3
-  oscRange: 2
+  speed: 15
+  maxSpeed: 30
+  minSpeed: 12
+  maxOsc: 4
+  minOsc: 1
   blinking: 0
   blinkHitDuration: 0.75
   blinkColor: {r: 1, g: 1, b: 1, a: 0}

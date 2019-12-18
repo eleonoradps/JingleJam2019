@@ -194,6 +194,7 @@ public class PlayerMovement : MonoBehaviour
 	public void AddScore(int value)
 	{
 		score += value;
+		textGiftCounter.text = score.ToString();
 	}
 
 	public void AddSize(float value)

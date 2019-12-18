@@ -39,10 +39,6 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("GameScene");
     }
 
-    public void Quit()
-    {
-        Application.Quit();
-    }
 
     public void ContinuePlaying()
     {
@@ -66,5 +62,9 @@ public class MenuManager : MonoBehaviour
     public void LoadCreditsScene()
     {
         SceneManager.LoadScene("CreditsScene");
+    }
+    public void Quit()
+    {
+        Application.Quit();
     }
 }

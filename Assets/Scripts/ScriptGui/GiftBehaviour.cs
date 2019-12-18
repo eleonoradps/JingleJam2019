@@ -5,7 +5,7 @@ using UnityEngine;
 public class GiftBehaviour : MonoBehaviour
 {
 
-	[SerializeField] private int value;
+	[SerializeField] private int value=1;
 	[SerializeField] private float fallingSpeed = 5;
 	[SerializeField] private Rigidbody2D m_body;
 

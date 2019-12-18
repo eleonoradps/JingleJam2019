@@ -3170,7 +3170,8 @@ PrefabInstance:
       propertyPath: divider
       value: 16
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7176548726269984004, guid: dbc1f0403035db747a84c6d840a04369, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dbc1f0403035db747a84c6d840a04369, type: 3}
 --- !u!1001 &1262280544
 PrefabInstance:
